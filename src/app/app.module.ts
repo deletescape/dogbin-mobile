@@ -5,21 +5,34 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { TabsPageModule } from '../pages/tabs/tabs.module';
+import { PastePage } from '../pages/paste/paste';
+import { PastePageModule } from '../pages/paste/paste.module';
+import { MyPastesPage } from '../pages/my-pastes/my-pastes';
+import { MyPastesPageModule } from '../pages/my-pastes/my-pastes.module';
+import { SettingsPage } from '../pages/settings/settings';
+import { SettingsPageModule } from '../pages/settings/settings.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TabsPageModule,
+    PastePageModule,
+    MyPastesPageModule,
+    SettingsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    TabsPage,
+    PastePage,
+    MyPastesPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
