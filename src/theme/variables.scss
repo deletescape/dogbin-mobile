@@ -26,6 +26,7 @@ $background-color: #282a36;
 $toolbar-background: #15151c;
 $tabs-background: #1f212b;
 $tabs-tab-color-inactive: #333750;
+$fab-list-button-background-color: #1f212b;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -40,6 +41,7 @@ $colors: (
   secondary:  #173E48,
   danger:     #660800,
   light:      #f8f8f2,
+  disabled:   #333750,
   dark:       #222
 );
 

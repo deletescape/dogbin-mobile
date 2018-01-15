@@ -14,12 +14,40 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'paste.html',
 })
 export class PastePage {
-
+  buttons: any = [
+    {
+      enabled: false,
+      icon: 'logo-twitter'
+    },
+    {
+      enabled: false,
+      icon: 'document'
+    },
+    {
+      enabled: false,
+      icon: 'copy'
+    },
+    {
+      enabled: true,
+      icon: 'add',
+      onClick: this.newPaste
+    },
+    {
+      enabled: true,
+      icon: 'bookmark',
+      onClick: this.savePaste
+    }
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PastePage');
   }
+  newPaste() {
 
+  }
+  savePaste() {
+
+  }
 }

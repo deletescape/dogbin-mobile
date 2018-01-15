@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Paste</ion-title>
+    <img id="logo" src="../../assets/imgs/logo.png">
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<ion-textarea mode="md" placeholder="Paste, save, share! (Pasting just an URL will shorten it!)"></ion-textarea>
+<ion-fab right bottom>
+  <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+  <ion-fab-list side="left">
+    <button *ngFor="let button of buttons" ion-fab [disabled]="!button.enabled" (click)="button.onClick()"><ion-icon [color]="!button.enabled ? 'disabled' : 'primary'" name="{{ button.icon }}"></ion-icon></button>
+  </ion-fab-list>
+</ion-fab>
 </ion-content>
